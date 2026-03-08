@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Nayara Moreira | Odontologia para toda Família</title>
+    <style>
+        :root {
+            --azul-escuro: #003366;
+            --azul-claro: #0078d4;
+            --branco: #ffffff;
+            --gelo: #f4f7f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--gelo); color: var(--azul-escuro); line-height: 1.6; scroll-behavior: smooth; }
+
+        header {
+            background-color: var(--branco); padding: 1rem 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo { font-weight: bold; font-size: 1.4rem; }
+        .logo span { color: var(--azul-claro); }
+        nav a { text-decoration: none; color: var(--azul-escuro); margin-left: 20px; font-weight: 500; }
+
+        /* Banner Principal com Fundo Profissional Azulado */
+        .hero {
+            height: 75vh; margin-top: 60px;
+            /* Usando imagem de consultório com sobreposição azul */
+            background: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 51, 102, 0.75)), 
+                        url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            color: var(--branco); text-align: center; padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3.2rem; margin-bottom: 10px; font-weight: 700; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+
+        /* Botão Azul Claro solicitado */
+        .btn-agendar {
+            background-color: var(--azul-claro); color: white;
+            padding: 18px 45px; text-decoration: none; border-radius: 5px;
+            font-weight: bold; text-transform: uppercase; transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: none; cursor: pointer;
+        }
+        .btn-agendar:hover { background-color: var(--branco); color: var(--azul-escuro); transform: translateY(-3px); }
+
+        /* Seção de Avaliações Reais */
+        .avaliacoes { padding: 80px 5%; }
+        .grid-avaliacoes {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px; max-width: 1150px; margin: 0 auto;
+        }
+        .card-depoimento {
+            background: white; border-radius: 15px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .img-depoimento { height: 400px; width: 100%; }
+        .img-depoimento img { width: 100%; height: 100%; object-fit: cover; }
+        .texto-depoimento { padding: 30px; text-align: center; }
+        .estrelas { color: #FFD700; font-size: 1.2rem; margin-bottom: 10px; }
+
+        .horarios { padding: 60px 5%; text-align: center; background: white; }
+        table { width: 100%; max-width: 500px; margin: 20px auto; border-collapse: collapse; }
+        td { padding: 15px; border-bottom: 1px solid #eee; }
+
+        /* Botão Flutuante ZAP */
+        .zap-flutuante {
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: var(--azul-claro); color: white;
+            width: 65px; height: 65px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; font-weight: bold; z-index: 2000;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        footer { background: var(--azul-escuro); color: white; text-align: center; padding: 30px; font-size: 0.9rem; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } nav { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Dra. Nayara <span>Moreira</span></div>
+        <nav><a href="#inicio">Início</a> <a href="#avaliacoes">Depoimentos</a> <a href="#contato">Contato</a></nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>Sorrisos que Transformam</h1>
+        <p>Atendimento humanizado para todas as idades, do lúdico ao especializado.</p>
+        <a href="https://wa.me/5500000000000" class="btn-agendar">Agendar Agora</a>
+    </section>
+
+    <section class="avaliacoes" id="avaliacoes">
+        <h2 style="text-align: center; margin-bottom: 50px; font-size: 2.2rem;">Cuidado Real para Pessoas Reais</h2>
+        <div class="grid-avaliacoes">
+            
+            <div class="card-depoimento">
+                <div class="img-depoimento"><img src="paciente-kids.jpg" alt="Odontopediatria"></div>
+                <div class="texto-depoimento">
+                    <div class="estrelas">★★★★★</div>
+                    <p style="font-style: italic; color: #555;">"A Dra. Nayara tem um dom! Minha filha perdeu o medo e amou o Stitch. Atendimento impecável."</p>
+                    <p style="margin-top: 15px; font-weight: bold; color: var(--azul-claro);">Odontopediatria</p>
+                </div>
+            </div>
+
+            <div class="card-depoimento">
+                <div class="img-depoimento"><img src="paciente-senior.jpg" alt="Clínica Geral e Geriátrica"></div>
+                <div class="texto-depoimento">
+                    <div class="estrelas">★★★★★</div>
+                    <p style="font-style: italic; color: #555;">"Muito carinho e paciência. Me senti segura durante todo o procedimento. Uma profissional rara."</p>
+                    <p style="margin-top: 15px; font-weight: bold; color: var(--azul-claro);">Clínica Geral e Geriátrica</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="horarios" id="contato">
+        <h2>Horários de Atendimento</h2>
+        <table>
+            <tr><td>Segunda a Sexta</td><td style="text-align: right;">08:00 – 18:00</td></tr>
+            <tr><td>Sábado</td><td style="text-align: right;">08:00 – 12:00</td></tr>
+        </table>
+        <p style="margin-top: 25px;">📍 Rua do Consultório, 123 - Centro</p>
+    </section>
+
+    <footer>&copy; 2026 Dra. Nayara Moreira - Todos os direitos reservados.</footer>
+
+    <a href="https://wa.me/5500000000000" class="zap-flutuante">ZAP</a>
+
+</body>
+</html>
